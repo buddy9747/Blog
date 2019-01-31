@@ -1,0 +1,30 @@
+{% extends "Blog/Master.html" %}
+
+{% block content %}
+<div class="row">
+<div class="col-md-9">
+    <p style="font-size: 17px;text-align: justify">Hey Buddies! My name is Mukul. Basically, I am a coder. To wirte a complex logical code is my passion. To be very honest, I started all of these in
+    graduation period. Before this, I didn't know anything about computer languages. I remembered when I started my graduation at that time I knew the real power of computer.
+        I like to work on system and love to code.</p>
+
+    <p style="font-size: 17px;text-align: justify">First I learned ASP.net and created a college website with college membership(uploaded on github) then I learned CORE JAVA and created
+        a Payrol system on console base. After learning Python with Django. I started my internship at gurgaon and completed it successfully in garments factory on
+        Automated line balancing project. Now, I have switched on Machine Learning and Deep Learning. I started ML with earthquake prediction.
+    </p>
+    <p style="font-size: 17px;text-align: justify">But these all are not my destination. It's something different. yeah, ofcourse it's passes through Artificial Intelligence. To be entrepreneur an innovative idea and confidance are needed
+    and with CS stream success can be achieved through IOT and Artificial Intelligence.</p>
+    <p style="font-size: 17px;text-align: justify">So, bring your all energy and get back to ready to achieve this goal.</p>
+    </div>
+
+    <div class="col-md-3" style="background-color: white;color: black; max-height: 400px;overflow-y: hidden;">
+        <h3 style="text-align: center">Innovative News</h3><hr>
+    <marquee direction="up" onmouseover="this.stop();" onmouseout="this.start();">
+        {% for i in c%}
+        <a href="{{ i.link }}" target="_blank"  style="text-decoration:none;"><p style="text-align: justify;">{{ i.news }}</p></a>
+        {% endfor %}
+    </marquee>
+
+    </div>
+</div>
+
+{% endblock %}

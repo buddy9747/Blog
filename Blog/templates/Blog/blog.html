@@ -1,0 +1,7 @@
+{%  extends 'Blog/Master.html' %}
+{% block content %}
+   <marquee behavior="alternate" bgcolor="#000080" style="color: #FFFFFF;"> <h3>World Biggest Coding Platform</h3></marquee>
+        {% for blog in object_list %}
+            <h5>{{ blog.date|date:"Y-d-m" }}<a href="/blog/{{ blog.id }}"><center>{{  blog.title }}</center></a> </h5>
+    {% endfor %}
+{% endblock %}

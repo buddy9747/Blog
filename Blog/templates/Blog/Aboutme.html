@@ -1,0 +1,10 @@
+{% extends 'Blog/Master.html' %}
+
+{% block content %}
+    {% load staticfiles %}
+   {% for c in content %}
+        <p>{{ c }}</p>
+    {% endfor %}
+           To view my remsume <a href="{% static 'CV_(Mukul_Kumar_Singh).pdf' %}" target="_blank">click here</a>
+
+{% endblock %}

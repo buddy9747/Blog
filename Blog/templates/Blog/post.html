@@ -1,0 +1,8 @@
+{% extends "Blog/Master.html" %}
+
+{% block content %}
+<h3>{{ blog.title }}</h3>
+    <h6>on {{ blog.date }}</h6><hr>
+{{ blog.body|safe|linebreaks }}
+
+{% endblock %}
